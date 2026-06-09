@@ -1,0 +1,32 @@
+.testimonial-section{
+  padding:80px 40px;
+  background:#f8fafc;
+  text-align:center;
+}
+
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+}
+
+.testimonial-card{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.testimonial-card img{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+@media(max-width:768px){
+
+  .testimonial-grid{
+    grid-template-columns:1fr;
+  }
+}
