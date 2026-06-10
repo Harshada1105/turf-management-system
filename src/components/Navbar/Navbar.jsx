@@ -1,14 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiBell, FiMenu, FiX } from "react-icons/fi";
 import "./Navbar.css";
 
 function Navbar() {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <nav className="navbar">
-
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="mobile-menu-btn">
           {menuOpen ? (
             <FiX onClick={() => setMenuOpen(false)} />
@@ -33,7 +46,6 @@ function Navbar() {
           <button className="login-btn">Login</button>
           <button className="register-btn">Register</button>
         </div>
-
       </nav>
 
       <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
