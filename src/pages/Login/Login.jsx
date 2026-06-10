@@ -1,9 +1,11 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
+import Footer from "../../components/Footer/Footer";
 
 function Login() {
   return (
+    <>
     <div className="login-page">
       <Link to="/" className="back-btn">
         <FiArrowLeft />
@@ -46,6 +48,8 @@ function Login() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
 

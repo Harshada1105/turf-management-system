@@ -9,16 +9,16 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-  if(menuOpen){
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-  return () => {
-    document.body.style.overflow = "auto";
-  };
-}, [menuOpen]);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,12 +43,9 @@ function Navbar() {
           )}
         </div>
 
-        <div
-  className="logo"
-  onClick={() => navigate("/")}
->
-  ⚽ TurfMaster
-</div>
+        <div className="logo" onClick={() => navigate("/")}>
+          ⚽ TurfMaster
+        </div>
 
         <ul className="nav-links">
           <li>Home</li>
@@ -62,7 +59,10 @@ function Navbar() {
           <button className="login-btn" onClick={() => navigate("/login")}>
             Login
           </button>
-          <button className="register-btn" onClick={() => navigate("/register")} >
+          <button
+            className="register-btn"
+            onClick={() => navigate("/register")}
+          >
             Register
           </button>
         </div>
@@ -77,20 +77,20 @@ function Navbar() {
         <a href="#" onClick={() => navigate("/login")}>
           Login
         </a>
-        <a href="#" onClick={(e) => {e.preventDefault();
-        navigate("/register");
-        setMenuOpen(false);
-        }}
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/register");
+            setMenuOpen(false);
+          }}
         >
-  Register
-</a>
+          Register
+        </a>
       </div>
       {menuOpen && (
-  <div
-    className="menu-overlay"
-    onClick={() => setMenuOpen(false)}
-  ></div>
-)}
+        <div className="menu-overlay" onClick={() => setMenuOpen(false)}></div>
+      )}
     </>
   );
 }

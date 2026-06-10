@@ -52,16 +52,6 @@ const turfData = [
     description:
       "Multi-sport venue for football and cricket.",
     features: ["Large Ground", "Cafeteria", "Parking"]
-  },
-  {
-    id: 6,
-    name: "Multi Sports Arena",
-    price: "₹2500/hr",
-    image:
-      "https://images.unsplash.com/photo-1518604666860-9ed391f76460?w=800",
-    description:
-      "Multi-sport venue for football and cricket.",
-    features: ["Large Ground", "Cafeteria", "Parking"]
   }
 ];
 

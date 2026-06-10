@@ -159,7 +159,7 @@
   margin-top:20px;
 }
 
-.login-text span{
+.login-text a{
   color:#10b981;
   font-weight:600;
   cursor:pointer;
