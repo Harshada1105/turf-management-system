@@ -59,10 +59,12 @@ function Navbar() {
 
         <div className="nav-right">
           <FiBell className="bell-icon" />
-          <button className="login-btn">Login</button>
+          <button className="login-btn" onClick={() => navigate("/login")}>
+            Login
+          </button>
           <button className="register-btn" onClick={() => navigate("/register")} >
-  Register
-</button>
+            Register
+          </button>
         </div>
       </nav>
 
@@ -72,7 +74,9 @@ function Navbar() {
         <a href="#">Sports</a>
         <a href="#">About</a>
         <a href="#">Notifications</a>
-        <a href="#">Login</a>
+        <a href="#" onClick={() => navigate("/login")}>
+          Login
+        </a>
         <a href="#" onClick={(e) => {e.preventDefault();
         navigate("/register");
         setMenuOpen(false);

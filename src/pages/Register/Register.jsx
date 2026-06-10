@@ -2,6 +2,7 @@ import "./Register.css";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 function Register() {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Register() {
     <div className="register-page">
         <Link to="/" className="back-btn">
   <FiArrowLeft />
-  <span>Back</span>
+  <span></span>
 </Link>
 
       <div className="register-card">
