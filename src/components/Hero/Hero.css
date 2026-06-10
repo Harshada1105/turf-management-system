@@ -1,13 +1,11 @@
 .hero{
   height:100vh;
-
   background:
   linear-gradient(
   rgba(0,0,0,.55),
   rgba(0,0,0,.65)
   ),
   url(../../assets/imgs/stadium.png);
-
   background-size:cover;
   background-position:center;
 }
@@ -29,7 +27,6 @@
   font-size:28px;
   padding:0 15px;
 }
-
 .hero-content p{
   padding:0 15px;
 }
@@ -39,7 +36,6 @@
     opacity:0;
     transform:translateY(60px);
   }
-
   to{
     opacity:1;
     transform:translateY(0);
@@ -66,7 +62,6 @@
     opacity:0;
     transform:translateY(20px);
   }
-
   to{
     opacity:1;
     transform:translateY(0);
@@ -87,7 +82,6 @@
     opacity:0;
     transform:scale(.8);
   }
-
   to{
     opacity:1;
     transform:scale(1);
@@ -101,7 +95,6 @@
   padding:16px 34px;
   border-radius:14px;
 }
-
 .secondary-btn{
   background:rgba(255,255,255,.15);
   color:white;
@@ -114,7 +107,6 @@
 .secondary-btn{
   transition:all .3s ease;
 }
-
 .primary-btn:hover,
 .secondary-btn:hover{
   transform:translateY(-5px);

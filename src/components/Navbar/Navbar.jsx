@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { FiBell, FiMenu, FiX } from "react-icons/fi";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -41,9 +43,12 @@ function Navbar() {
           )}
         </div>
 
-        <div className="logo">
-          ⚽ TurfMaster
-        </div>
+        <div
+  className="logo"
+  onClick={() => navigate("/")}
+>
+  ⚽ TurfMaster
+</div>
 
         <ul className="nav-links">
           <li>Home</li>
@@ -55,7 +60,9 @@ function Navbar() {
         <div className="nav-right">
           <FiBell className="bell-icon" />
           <button className="login-btn">Login</button>
-          <button className="register-btn">Register</button>
+          <button className="register-btn" onClick={() => navigate("/register")} >
+  Register
+</button>
         </div>
       </nav>
 
@@ -66,7 +73,13 @@ function Navbar() {
         <a href="#">About</a>
         <a href="#">Notifications</a>
         <a href="#">Login</a>
-        <a href="#">Register</a>
+        <a href="#" onClick={(e) => {e.preventDefault();
+        navigate("/register");
+        setMenuOpen(false);
+        }}
+        >
+  Register
+</a>
       </div>
       {menuOpen && (
   <div

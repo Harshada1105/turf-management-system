@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import SearchBar from "./components/SearchBar/SearchBar";
-import FeaturedTurfs from "./components/FeaturedTurfs/FeaturedTurfs";
-import Sports from "./components/Sports/Sports";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
+import Hero from "../components/Hero/Hero";
+import SearchBar from "../components/Searchbar/Searchbar";
+import FeaturedTurfs from "../components/FeaturedTurfs/FeaturedTurfs";
+import Sports from "../components/Sports/Sports";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Footer from "../components/Footer/Footer";
 
-function App() {
+function LandingPage() {
   return (
     <>
       <Navbar />
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default LandingPage;
