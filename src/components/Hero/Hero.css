@@ -6,7 +6,7 @@
   rgba(0,0,0,.55),
   rgba(0,0,0,.65)
   ),
-  url(../../assets/stadium.png);
+  url(../../assets/imgs/stadium.png);
 
   background-size:cover;
   background-position:center;
@@ -23,6 +23,15 @@
   text-align:center;
   color:white;
   animation:heroFadeUp 1.2s ease forwards;
+}
+
+.hero-content h1{
+  font-size:28px;
+  padding:0 15px;
+}
+
+.hero-content p{
+  padding:0 15px;
 }
 
 @keyframes heroFadeUp{
@@ -119,5 +128,53 @@
 
   .hero-buttons{
     flex-direction:column;
+  }
+}
+
+/* ==========================
+   MOBILE HERO BUTTONS
+========================== */
+
+@media (max-width: 768px){
+
+  .hero-buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+
+    width:100%;
+    padding:0 20px;
+  }
+
+  .primary-btn,
+  .secondary-btn{
+   width:100%;
+    max-width:none;
+
+    padding:14px 20px;
+
+    font-size:15px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .primary-btn,
+  .secondary-btn{
+    max-width:250px;
+
+    padding:12px 18px;
+
+    font-size:14px;
+  }
+
+  .hero-content h1{
+    font-size:26px;
+  }
+
+  .hero-content p{
+    font-size:13px;
+    padding:0 10px;
   }
 }

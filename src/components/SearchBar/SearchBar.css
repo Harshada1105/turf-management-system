@@ -1,18 +1,29 @@
 .search-section{
-  margin-top:-70px;
+  margin-top:-80px;
+  position:relative;
+  z-index:100;
   padding:0 20px;
 }
 
 .search-card{
   max-width:1200px;
   margin:auto;
-  background:white;
-  border-radius:16px;
-  padding:25px;
+
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(15px);
+
+  padding:30px;
+
+  border-radius:24px;
+
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  gap:20px;
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.08);
+
+  animation:searchCardShow 1s ease;
 }
 
 .input-group{
@@ -22,26 +33,86 @@
 
 .input-group label{
   margin-bottom:8px;
+  font-size:13px;
+  font-weight:600;
+  color:#0f766e;
 }
 
 .input-group select,
 .input-group input{
-  height:50px;
-  border:1px solid #ddd;
-  border-radius:8px;
+  height:55px;
+
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+
   padding:0 15px;
+
+  background:#f9fafb;
+
+  font-size:14px;
+
+  transition:.3s;
+}
+
+.input-group select:focus,
+.input-group input:focus{
+  outline:none;
+
+  border-color:#10b981;
+
+  box-shadow:
+  0 0 0 4px rgba(16,185,129,.15);
 }
 
 .search-btn{
   border:none;
-  background:#0f766e;
+
+  background:linear-gradient(
+    135deg,
+    #10b981,
+    #059669
+  );
+
   color:white;
-  border-radius:8px;
+
+  border-radius:14px;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.search-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 15px 30px rgba(16,185,129,.35);
+}
+
+@keyframes searchCardShow{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 @media(max-width:768px){
 
   .search-card{
     grid-template-columns:1fr;
+    padding:20px;
+  }
+
+  .search-btn{
+    height:55px;
   }
 }

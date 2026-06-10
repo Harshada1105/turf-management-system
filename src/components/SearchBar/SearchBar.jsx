@@ -1,4 +1,9 @@
 import "./Searchbar.css";
+import {
+  FiMapPin,
+  FiCalendar,
+  FiActivity
+} from "react-icons/fi";
 
 function SearchBar() {
   return (
@@ -6,28 +11,35 @@ function SearchBar() {
       <div className="search-card">
 
         <div className="input-group">
-          <label>Location</label>
-          <select>
-            <option>Select City</option>
-            <option>Pune</option>
-            <option>Mumbai</option>
-            <option>Bangalore</option>
-          </select>
-        </div>
+  <label>
+    <FiMapPin /> Location
+  </label>
+
+  <select>
+    <option>Select City</option>
+    <option>Pune</option>
+    <option>Mumbai</option>
+  </select>
+</div>
 
         <div className="input-group">
-          <label>Sport Type</label>
-          <select>
-            <option>Football</option>
-            <option>Cricket</option>
-            <option>Badminton</option>
-          </select>
-        </div>
+  <label>
+    <FiActivity /> Sport
+  </label>
+
+  <select>
+    <option>Football</option>
+    <option>Cricket</option>
+    <option>Badminton</option>
+  </select>
+</div>
 
         <div className="input-group">
-          <label>Date</label>
-          <input type="date" />
-        </div>
+  <label>
+    <FiCalendar /> Date
+  </label>
+  <input type="date" />
+</div>
 
         <button className="search-btn">
           Search Available Slots

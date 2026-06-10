@@ -9,16 +9,25 @@
 }
 
 .section-header h2{
+  font-size:2.5rem;
   color:#0f766e;
-  font-size:32px;
+}
+
+.section-header p{
+  color:#6b7280;
+  margin-top:10px;
 }
 
 .turf-card{
+  height: 450px;
+  display: flex;
+  flex-direction: column;
   background:white;
-  border-radius:18px;
+  border-radius:20px;
   overflow:hidden;
-  box-shadow:0 8px 25px rgba(0,0,0,0.08);
-  transition:.3s;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+  transition:.4s;
 }
 
 .turf-card:hover{
@@ -32,6 +41,9 @@
 }
 
 .turf-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
   padding:20px;
 }
 
@@ -47,4 +59,25 @@
 .turf-content span{
   color:#0f766e;
   font-weight:700;
+}
+
+.turf-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+}
+
+.features{
+  margin-top:auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.swiper-slide{
+  height:auto;
+  display:flex;
+}
+
+.swiper-slide .turf-card{
+  width:100%;
 }

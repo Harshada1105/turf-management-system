@@ -6,6 +6,17 @@ function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+  if(menuOpen){
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [menuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +68,12 @@ function Navbar() {
         <a href="#">Login</a>
         <a href="#">Register</a>
       </div>
+      {menuOpen && (
+  <div
+    className="menu-overlay"
+    onClick={() => setMenuOpen(false)}
+  ></div>
+)}
     </>
   );
 }
