@@ -1,16 +1,16 @@
 import "./Register.css";
+import { Link } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
     const navigate = useNavigate();
   return (
     <div className="register-page">
-        <div
-        className="register-logo"
-        onClick={() => navigate("/")}
-      >
-        ⚽ TurfMaster
-      </div>
+        <Link to="/" className="back-btn">
+  <FiArrowLeft />
+  <span>Back</span>
+</Link>
 
       <div className="register-card">
 
